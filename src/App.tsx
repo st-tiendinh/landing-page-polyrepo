@@ -1,10 +1,7 @@
-import { formatDate } from '@st-tiendinh/shared-utils-polyrepo';
-import { Button } from './components/ui';
+import { Button, Calendar } from './components/ui';
 import './App.css';
 
 function App() {
-  const today = new Date();
-
   return (
     <div className="app-container">
       <div className="hero-section">
@@ -12,17 +9,24 @@ function App() {
           <h1 className="hero-title">Welcome to Vite</h1>
           <p className="hero-subtitle">Lightning fast development experience</p>
           <div className="date-badge">
-            <svg className="calendar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg
+              className="calendar-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
               <line x1="16" y1="2" x2="16" y2="6"></line>
               <line x1="8" y1="2" x2="8" y2="6"></line>
               <line x1="3" y1="10" x2="21" y2="10"></line>
             </svg>
-            <span>{formatDate(today, 'long')}</span>
+            <Calendar />
           </div>
         </div>
       </div>
-      
+
       <div className="feature-section">
         <div className="feature-card">
           <div className="feature-icon">⚡</div>
